@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive card layout</title>
+    <style>
+        .card-container {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+         width: 300px;
+         margin: 20px;
+         border: 2px solid black;
+         border-radius: 8px;
+         overflow: hidden;
+         transition: transform;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card :hover {
+            transform: translateY(-5px);
+        }
+        .card-content{
+            padding:  10px ;
+
+        }
+        .card-content h2{
+            margin-bottom: 12px;
+        }
+        .card img{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            display: block;
+        }
+        @media(max-width:500px) {
+            .card-content h2{
+                
+                text-transform: uppercase;
+            }
+            .card{
+                background-color: rgb(243, 243, 134);
+
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+   <div class="card-container">
+    <div class="card">
+        <img src="IMG 8.jpg" alt="Image from Chrome"> 
+        <div class="card-content">
+            <h2>card 1</h2>
+            <p>This is the description for card 1.</p>
+        </div>
+    </div>
+    <div class="card">
+    <img src="IMG 9.jpg" alt="Image from Chrome">
+    <div class="card-content">
+        <h2>card 2</h2>
+        <p>This is the description for card 2.</p>
+    </div>
+   </div>
+   <div class="card">
+    <img src="IMG 10.jpg" alt="Image from Chrome"> 
+    <div class="card-content">
+        <h2>card 3</h2>
+        <p>This is the description for card 3.</p>
+    </div>
+   </div>
+</div>
+    
+</body>
+</html>
